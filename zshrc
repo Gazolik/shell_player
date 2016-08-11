@@ -10,4 +10,4 @@ function ps1 {
   fi
 }
 
-trap ' ps1; PS1=$ACT_PS1; zle reset-prompt; ' USR1
+trap ' ps1; PS1=$ACT_PS1; zle && zle reset-prompt; ' USR1

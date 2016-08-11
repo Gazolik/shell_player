@@ -9,3 +9,6 @@ msg = {}
 msg['pid'] = os.getppid()
 msg['args'] = sys.argv[1:]
 conn.send(msg)
+resp = conn.recv()
+print(resp)
+conn.close()
