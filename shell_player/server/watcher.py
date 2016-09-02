@@ -12,8 +12,9 @@ class Watcher(threading.Thread):
     def run(self):
         while self.running:
             time.sleep(1)
+            self.interface.update()
             if self.displayed != self.interface.disp:
-                print("Disp changed !", displayed)
+                print("Disp changed !", self.displayed)
                 self.notify_changes()
         with open(self.shell_file, 'w') as f:
             print('Clearing file')

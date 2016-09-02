@@ -14,9 +14,12 @@ class Interface:
         self.disp = ''
 
     def process_msg(self, msg):
-        return_state = self.state.process(msg[0], msg[1:])
+        return_state = self.state.process(msg[0], *msg[1:])
         self.state = self.all_states[return_state]
-        info = self.state.get_info()
-        self.disp = self.state.get_disp()
+        info = self.state.output_info()
+        self.update()
         return not isinstance(self.state, ExitState), info
 
+    def update(self):
+        self.player.update()
+        self.disp = self.state.get_disp()
