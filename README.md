@@ -3,7 +3,7 @@
 Simple online music player in your terminal.  
 It only works with zsh and youtube musics at the moment.
 shell_player is a music player in command line, the player is available from all your open terminals.
-
+[![asciicast](https://asciinema.org/a/a0ya64skxok2xdbwqxlbh94vc.png)](https://asciinema.org/a/a0ya64skxok2xdbwqxlbh94vc)
 ## Install
 
 install vlc  
